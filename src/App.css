@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+:root{
+  --heading-font: "Space Grotesk", sans-serif;
+  --body-font: "DM Sans", sans-serif;
+  --code-font: "JetBrains Mono", monospace;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: var(--body-font);
+    background: #000000;
+    color: white;
+    line-height: 1.6;
+
+}

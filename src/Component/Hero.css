@@ -1,0 +1,153 @@
+.hero {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    min-height: 84vh;
+    box-sizing: border-box;
+
+    padding: 0 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    transition: all 0.5s ease;
+}
+.hero h1 {
+   
+    margin: 0;
+
+}
+.hero h2{
+     font-family: var(--body-font);
+     font-size:clamp(1rem,3vw,2rem);
+    margin-top:20px;
+    color:#FFD700;
+    letter-spacing:2px;
+    text-align: center;
+}
+.heading{
+     transition: filter 0.1s linear,
+              opacity 0.1s linear,
+              transform 0.1s linear;
+  will-change: filter, opacity, transform;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    font-family: var(--heading-font);
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight:700;
+    letter-spacing:-3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    line-height: 1.1em;
+}
+
+.glow{
+  position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(124,58,237,.25),
+        rgba(99,102,241,.20),
+        rgba(59,130,246,.12),
+        transparent 70%
+    );
+
+    filter: blur(70px);
+
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+
+    opacity: 0;
+    transition: opacity .3s;
+
+    z-index: 1;
+}
+
+.heading:hover .glow{
+    opacity:1;
+}
+.heading br{
+    display: none;
+}
+@media (max-width: 768px) {
+
+    .hero {
+        width: 100%;
+        min-height: calc(100vh - 75px);
+        padding: 30px 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .heading {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        font-size: clamp(2.8rem, 14vw, 4rem);
+        line-height: 1.05;
+        letter-spacing: -2px;
+        text-align: center;
+    }
+
+    .heading br {
+        display: block;
+    }
+
+    .hero h2 {
+        width: 100%;
+        margin: 18px 0 0;
+
+        font-size: 1.05rem;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+    .glow {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero {
+        min-height: calc(100vh - 75px);
+        padding: 25px 15px;
+    }
+
+    .heading {
+        font-size: 2.8rem;
+        letter-spacing: -1px;
+    }
+
+    .hero h2 {
+        font-size: 0.95rem;
+    }
+}
